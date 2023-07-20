@@ -12,7 +12,7 @@
             string str1 = "abc", str2 = "xyz", str3 = "pqr";
             Console.WriteLine("Welcome to Generic Programs");
             Console.WriteLine("Choose any one program from given option");
-            Console.WriteLine("1.Print array without generics\n2.Print array using generics\n3.Print array using generic class\n4.FindMaxValue");
+            Console.WriteLine("1.Print array without generics\n2.Print array using generics\n3.Print array using generic class\n4.FindMaxValue\n5.FindMaxValue using generic");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -39,6 +39,10 @@
                     FindMaxValue.FindMax(a,b,c);
                     Console.WriteLine("Given input are {0} {1} {2}", str1, str2, str3);
                     FindMaxValue.FindMax(str1, str2, str3);
+                    break;
+                case 5:
+                    FindMaxValueUsingGenerics<int> intObj = new FindMaxValueUsingGenerics<int>(x,y,z);
+                    intObj.TextMaximum();
                     break;
 
                 default:

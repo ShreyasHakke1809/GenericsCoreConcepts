@@ -9,7 +9,7 @@
             char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
             Console.WriteLine("Welcome to Generic Programs");
             Console.WriteLine("Choose any one program from given option");
-            Console.WriteLine("1.Print array without generics");
+            Console.WriteLine("1.Print array without generics\n2.Print array using generics");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -18,6 +18,12 @@
                     PrintArray.ToPrint(doubleArray);
                     PrintArray.ToPrint(charArray);
                     break;
+                case 2:
+                    PrintArrayUsingGenerics.ToPrint<int>(intArray);
+                    PrintArrayUsingGenerics.ToPrint<double>(doubleArray);
+                    PrintArrayUsingGenerics.ToPrint<char>(charArray);
+                    break;
+               
                 default:
                     Console.WriteLine("Choose number within range");
                     break;
